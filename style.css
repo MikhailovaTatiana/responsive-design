@@ -1,5 +1,5 @@
 :root {
-    --wrapper-color: rgba(255, 255, 255, 1);
+    --wrapper-color: rgb(252, 246, 252);
     --bg-color-brown: rgb(158, 109, 82);
     --bg-color-green: rgb(10, 132, 110);
 }
@@ -13,12 +13,12 @@
 body {
     display: flex;
     justify-content: center;
+    background-color: var(--wrapper-color);
 }
 
 .wrapper {
     min-height: 100vh;
-    width: 80%;
-    background-color: var(--wrapper-color);
+    min-width: 1000px;
 }
 
 .hero {
@@ -52,4 +52,20 @@ body {
     grid-row: 2 / 2;
     background-color: var(--bg-color-green);
     background-image: url("./imgs/dig.svg");
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    height: 60px;
+}
+
+a {
+    color: var(--bg-color-green);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Maven Pro';
 }
