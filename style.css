@@ -1,0 +1,55 @@
+:root {
+    --wrapper-color: rgba(255, 255, 255, 1);
+    --bg-color-brown: rgb(158, 109, 82);
+    --bg-color-green: rgb(10, 132, 110);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    min-height: 100vh;
+    width: 80%;
+    background-color: var(--wrapper-color);
+}
+
+.hero {
+    height: 85vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.hero aside {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero aside:nth-of-type(1) {
+    grid-row: 1 / span 2;
+    background-image: url("./imgs/hand.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero aside:nth-of-type(2) {
+    grid-row: 1 / 2;
+    background-color: var(--bg-color-brown);
+    background-image: url("./imgs/seedling.svg");
+}
+
+.hero aside:nth-of-type(3) {
+    grid-row: 2 / 2;
+    background-color: var(--bg-color-green);
+    background-image: url("./imgs/dig.svg");
+}
