@@ -18,17 +18,19 @@ body {
 
 .wrapper {
     min-height: 100vh;
-    min-width: 1000px;
+    max-width: 1000px;
+    font-family: 'Maven Pro';
+    background-color: white;
 }
 
 .hero {
-    height: 85vh;
+    height: 60vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
-.hero aside {
+aside {
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -58,8 +60,8 @@ nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: white;
     height: 60px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 a {
@@ -67,5 +69,49 @@ a {
     text-decoration: none;
     font-size: 20px;
     font-weight: 500;
-    font-family: 'Maven Pro';
+}
+
+h1 {
+    color: var(--bg-color-green);
+    font-size: 48px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.main-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    height: 377px;
+    margin: 2.5rem;
+
+    aside:nth-of-type(1) {
+        height: 377px;
+        width: 377px;
+        background-color: var(--bg-color-green);
+        border-radius: 50%;
+        background-image: url("./imgs/vectorseedpackage.svg");
+    }
+
+    aside:nth-of-type(2) {
+        grid-column: 2 / span 2;
+        align-self: center;
+        padding: 0 1rem;
+
+        h2 {
+            padding-bottom: 1rem;;
+        }
+
+        button {
+            width: 179px;
+            height: 63px;
+            background-color: var(--bg-color-green);
+            border-radius: 9px;
+            color: white;
+            font-size: 24px;
+            border: none;
+            margin-left: 55%;
+            margin-top: 5%;
+        }
+    }
 }
