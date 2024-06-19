@@ -23,37 +23,37 @@ body {
     background-color: white;
 }
 
-.hero {
-    height: 60vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
 aside {
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.hero aside:nth-of-type(1) {
-    grid-row: 1 / span 2;
-    background-image: url("./imgs/hand.jpg");
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.hero {
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 
-.hero aside:nth-of-type(2) {
-    grid-row: 1 / 2;
-    background-color: var(--bg-color-brown);
-    background-image: url("./imgs/seedling.svg");
-}
-
-.hero aside:nth-of-type(3) {
-    grid-row: 2 / 2;
-    background-color: var(--bg-color-green);
-    background-image: url("./imgs/dig.svg");
+    aside:nth-of-type(1) {
+        grid-row: 1 / span 2;
+        background-image: url("./imgs/hand.jpg");
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    aside:nth-of-type(2) {
+        grid-row: 1 / 2;
+        background-color: var(--bg-color-brown);
+        background-image: url("./imgs/seedling.svg");
+    }
+    
+    aside:nth-of-type(3) {
+        grid-row: 2 / 2;
+        background-color: var(--bg-color-green);
+        background-image: url("./imgs/dig.svg");
+    }
 }
 
 nav {
@@ -62,13 +62,13 @@ nav {
     align-items: center;
     height: 60px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-}
 
-a {
-    color: var(--bg-color-green);
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 500;
+    a {
+        color: var(--bg-color-green);
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
+    }
 }
 
 h1 {
@@ -103,8 +103,9 @@ h1 {
         }
 
         button {
-            width: 179px;
+            width: max-content;
             height: 63px;
+            padding: 0 1rem;
             background-color: var(--bg-color-green);
             border-radius: 9px;
             color: white;
@@ -114,4 +115,54 @@ h1 {
             margin-top: 5%;
         }
     }
+}
+
+hr {
+    height: 3px;
+    width: 30%;
+    background-color: var(--bg-color-green);
+    margin: 3.5rem 35%;
+}
+
+.cards {
+
+}
+
+.main-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    height: 377px;
+    margin: 2.5rem;
+
+    aside:nth-of-type(1) {
+        grid-column: 1 / span 2;
+        align-self: center;
+        padding: 0 1rem;
+
+        h2 {
+            padding-bottom: 1rem;;
+        }
+
+        button {
+            width: max-content;
+            height: 63px;
+            padding: 0 1rem;
+            background-color: var(--bg-color-green);
+            border-radius: 9px;
+            color: white;
+            font-size: 24px;
+            border: none;
+            margin-right: 55%;
+            margin-top: 5%;
+        }
+    }
+
+    aside:nth-of-type(2) {
+        height: 377px;
+        width: 377px;
+        background-color: var(--bg-color-green);
+        border-radius: 50%;
+        background-image: url("./imgs/plant.svg");
+    }
+
 }
