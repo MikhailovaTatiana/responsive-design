@@ -2,6 +2,7 @@
     --wrapper-color: rgb(252, 246, 252);
     --bg-color-brown: rgb(158, 109, 82);
     --bg-color-green: rgb(10, 132, 110);
+    --bg-card-button: rgb(185, 56, 87);
 }
 
 * {
@@ -148,8 +149,45 @@ hr {
 
         article {
             width: 300px;
-            height: 400px;
+            height: 390px;
             box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+            figure img {
+                width: 100%;
+                aspect-ratio: 1;
+                object-fit: cover; 
+            }
+
+            .card-footer {
+                height: 80px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-items: start;
+                align-items: center;
+                padding: 0 1rem;
+
+                h3 {
+                    font-size: 22px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+                .date {
+                    justify-self: end;
+                    font-weight: 600;
+                }
+
+                button {
+                    background-color: var(--bg-card-button);
+                    height: 25px;
+                    font-size: 12px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    justify-self: end;
+                }
+            }
         }
     }
 }
