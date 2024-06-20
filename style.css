@@ -99,7 +99,7 @@ h1 {
     height: 377px;
     margin: 2.5rem;
 
-    aside:nth-of-type(1) {
+    .circle {
         height: 377px;
         width: 377px;
         background-color: var(--bg-color-green);
@@ -107,7 +107,7 @@ h1 {
         background-image: url("./imgs/vectorseedpackage.svg");
     }
 
-    aside:nth-of-type(2) {
+    .desc {
         grid-column: 2 / span 2;
         align-self: center;
         padding: 0 1rem;
@@ -179,6 +179,10 @@ hr {
                     font-weight: 600;
                 }
 
+                .sort {
+                    margin-top: auto;
+                }
+
                 button {
                     background-color: var(--bg-card-button);
                     height: 25px;
@@ -186,6 +190,7 @@ hr {
                     letter-spacing: 1px;
                     font-weight: 600;
                     justify-self: end;
+                    margin-top: auto;
                 }
             }
         }
@@ -198,7 +203,7 @@ hr {
     height: 377px;
     margin: 4.5rem 2.5rem;
 
-    aside:nth-of-type(1) {
+    .desc {
         grid-column: 1 / span 2;
         align-self: center;
         padding: 0 1rem;
@@ -213,7 +218,7 @@ hr {
         }
     }
 
-    aside:nth-of-type(2) {
+    .circle {
         height: 377px;
         width: 377px;
         background-color: var(--bg-color-green);
@@ -273,5 +278,142 @@ hr {
         color: darkslategray;
         text-decoration: none;
         font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .wrapper {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    aside {
+        width: 100%;
+        aspect-ratio: 1;
+    }
+
+    .hero {
+        width: 100%;
+        height: auto;
+        grid-template-rows: 2fr 1fr;
+
+        aside:nth-of-type(1) {  
+            grid-area: 1 / 1 / span 2 / span 2;
+        }
+
+        aside:nth-of-type(2){
+            grid-row: 3 / 4;
+            grid-column: 1 / 2;
+            background-size: 60%;
+        }
+
+        aside:nth-of-type(3){
+            grid-row: 3 / 4;
+            grid-column: 2 / 3;
+            background-size: 60%;
+        }
+    }
+
+    header nav {
+        display: none;
+    }
+
+    button {
+        height: 42px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .main-top,
+    .main-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 600px;
+        margin: 1rem;
+
+        .circle {
+            width: 240px;
+            height: 240px;
+            margin: 0;
+            background-size: 50%;
+        }
+
+        .desc {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 0;
+
+            h2 {
+                font-size: 22px;
+                padding-bottom: 0;
+            }
+    
+            p {
+                font-size: 16px;
+            }
+
+            button {
+                margin: 0;
+            }
+        }
+    }
+
+    .main-center {
+
+        .cards {
+            grid-template-columns: 1fr 1fr;
+            gap: .5rem;
+
+            article {
+                width: 170px;
+                height: 250px;
+
+                .card-footer {
+                    padding: .3rem;
+
+                    h3 {
+                        font-size: 16px;
+                    }
+    
+                    p {
+                        font-size: 11px;
+                    }
+    
+                    button {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: auto;
+
+        aside:nth-of-type(1) {
+            grid-row: 2 / 3;
+
+            .info {
+                font-size: 12px;
+                justify-content: space-between;
+                padding: 0 .5rem;
+
+                figure img {
+                    width: 20px;
+                }
+            }
+        }
+
+        aside:nth-of-type(2) {
+            grid-row: 1 / 2;
+        }
     }
 }
