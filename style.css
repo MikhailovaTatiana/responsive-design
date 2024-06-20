@@ -38,6 +38,7 @@ button {
     color: white;
     font-size: 24px;
     border: none;
+    cursor: pointer;
 }
 
 .hero {
@@ -79,7 +80,7 @@ header nav {
         color: var(--bg-color-green);
         text-decoration: none;
         font-size: 20px;
-        font-weight: 500;
+        font-weight: 600;
     }
 }
 
@@ -142,18 +143,14 @@ hr {
     .cards {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        margin: 2rem 0;
-        gap: 2rem;
+        margin: 1rem 0;
+        gap: 1.5rem;
 
         article {
             width: 300px;
             height: 400px;
             box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
         }
-    }
-
-    button {
-        
     }
 }
 
@@ -193,6 +190,8 @@ hr {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 70vh;
+    background-image: url("./imgs/earth-with-plants.jpg");
+    background-position: center;
 
     aside {
         display: flex;
@@ -202,13 +201,27 @@ hr {
 
     aside:nth-of-type(1) {
         background-color: black;
+        opacity: .8;
         color: white;
-        font-size: 75px;
-    }
+        position: relative;
 
-    aside:nth-of-type(2) {
-        background-image: url("./imgs/earth-with-plants.jpg");
-        background-size: cover;
+        h2 {
+            font-size: 75px;
+        }
+        
+        .info {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            bottom: 1rem;
+            font-size: 24px;
+
+            figure {
+                display: flex;
+                align-items: center;
+            }
+        }
     }
 }
 
@@ -219,7 +232,7 @@ hr {
     padding: 1rem;
 
     a {
-        color: black;
+        color: darkslategray;
         text-decoration: none;
         font-size: 24px;
     }
