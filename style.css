@@ -22,7 +22,7 @@ body {
     max-width: 1000px;
     font-family: 'Maven Pro';
     background-color: white;
-    margin-bottom: 10rem;
+    margin-bottom: 7rem;
 }
 
 aside {
@@ -144,7 +144,7 @@ hr {
     .cards {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        margin: 1rem 0;
+        margin: 2rem 0;
         gap: 1.5rem;
 
         article {
