@@ -1,0 +1,202 @@
+:root {
+    --wrapper-color: rgb(252, 246, 252);
+    --bg-color-brown: rgb(158, 109, 82);
+    --bg-color-green: rgb(10, 132, 110);
+    --bg-card-button: rgb(185, 56, 87);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: var(--wrapper-color);
+}
+
+.wrapper {
+    min-height: 100vh;
+    max-width: 1000px;
+    font-family: 'Maven Pro';
+    background-color: white;
+    margin-bottom: 7rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+    a {
+        color: var(--bg-color-green);
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+.hero {
+    height: 50vh;
+    background-image: url("./imgs/earth-with-plants.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+form {
+    margin: 4rem 2rem;
+
+    fieldset {
+        border: none;
+    }
+}
+
+.inputs {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+    aside {
+        width: 48%;
+    }
+}
+
+input[type=text] {
+    height: 45px;
+    width: 100%;
+    border: none;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.btn-center {
+    text-align: center;
+}
+
+button {
+    width: max-content;
+    height: 63px;
+    padding: 0 1rem;
+    background-color: var(--bg-color-green);
+    border-radius: 9px;
+    color: white;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+main h2 {
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, fr);
+    gap: 1.5rem;
+    margin: 2rem 1.5rem 4rem;
+
+    article {
+        width: 300px;
+        height: 390px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        
+        .image-form {
+            background-image: url("https://images.unsplash.com/photo-1518568403628-df55701ade9e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            width: 100%;
+            aspect-ratio: 1;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    article:nth-child(1) {
+        grid-column: 1 / 1;
+    }
+
+    article:nth-child(3) {
+        grid-column: 3 / 4;
+        visibility: hidden;
+    }
+
+    .card-footer {
+        height: 80px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: start;
+        align-items: center;
+        padding: 0 1rem;
+
+        h3 {
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .date {
+            justify-self: end;
+            font-weight: 600;
+        }
+
+        .sort {
+            margin-top: auto;
+        }
+
+        button {
+            background-color: var(--bg-card-button);
+            height: 25px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            justify-self: end;
+            margin-top: auto;
+        }
+
+        img.trash {
+            height: 0;
+        }
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: var(--bg-color-brown);
+
+    article img {
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.bottom-link {
+    height: 60px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    text-align: center;
+    padding: 1rem;
+
+    a {
+        color: darkslategray;
+        text-decoration: none;
+        font-size: 24px;
+    }
+}
