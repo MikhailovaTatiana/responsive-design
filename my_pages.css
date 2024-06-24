@@ -52,6 +52,10 @@ header nav {
     color: white;
     font-size: 40px;
     letter-spacing: 2px;
+
+    .burger {
+        height: 0;
+    }
 }
 
 form {
@@ -198,5 +202,137 @@ main h2 {
         color: darkslategray;
         text-decoration: none;
         font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .wrapper {
+        margin-bottom: 0;
+        min-width: 100%;
+    }
+
+    header {
+        nav {
+            display: none;
+        }
+
+        .hero {
+            width: 100%;
+            aspect-ratio: 1;
+
+            figure {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 80%;
+                }
+            }
+
+            .burger {
+                height: 1.5rem;
+                position: absolute;
+                top: .5rem;
+                right: .5rem;
+            }
+        }
+
+        form {
+            margin: 2rem 1rem;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+    .inputs {
+        flex-direction: column;
+
+        aside {
+            width: 100%;
+        }
+    }
+
+    input[type=text] {
+        height: 36px;
+        margin: .5rem 0;
+    }
+
+    button {
+        height: 42px;
+        font-size: 16px;
+    }
+
+    main {
+
+        h2 {
+            font-size: 16px;
+            margin-top: 2rem;
+        }
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+        gap: .5rem;
+        margin: 1rem .5rem;
+
+        article {
+            width: 170px;
+            height: 250px;
+
+            figure img {
+                display: none;
+            }
+
+            .card-footer {
+                padding: .3rem;
+
+                h3 {
+                    font-size: 16px;
+                }
+
+                p {
+                    font-size: 11px;
+                }
+
+                button {
+                    display: none;
+                }
+
+                img.trash {
+                    height: 16px;
+                    margin-left: auto;
+                    margin-top: auto;
+                }
+            }
+        }
+
+        article:nth-child(3) {
+            display: none;
+        }
+    
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem;
+        gap: .5rem;
+        margin-top: 2rem;
+
+        article img {
+            aspect-ratio: 9 / 6;
+        }
+    }
+
+    .bottom-link {  
+        a {
+            font-size: 16px;
+        }
     }
 }
